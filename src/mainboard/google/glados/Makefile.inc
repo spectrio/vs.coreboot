@@ -31,6 +31,8 @@ ramstage-y += ramstage.c
 
 smm-$(CONFIG_HAVE_SMI_HANDLER) += smihandler.c
 
+ramstage-$(CONFIG_MAINBOARD_USE_LIBGFXINIT) += gma-mainboard.ads
+
 subdirs-y += variants/$(VARIANT_DIR)
 CPPFLAGS_common += -I$(src)/mainboard/$(MAINBOARDDIR)/variants/baseboard/include
 CPPFLAGS_common += -I$(src)/mainboard/$(MAINBOARDDIR)/variants/$(VARIANT_DIR)/include
