@@ -18,3 +18,5 @@ romstage-y += pei_data.c
 ramstage-y += pei_data.c
 ramstage-y += ramstage.c
 ramstage-y += hda_verb.c
+
+ramstage-$(CONFIG_MAINBOARD_USE_LIBGFXINIT) += gma-mainboard.ads
