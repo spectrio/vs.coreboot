@@ -171,7 +171,16 @@ chip soc/intel/skylake
 
 	# Enable Root Ports 5 and 9
 	register "PcieRpEnable[4]" = "1"
+	register "PcieRpClkReqSupport[4]" = "1"
+	register "PcieRpClkReqNumber[4]" = "4"
+	register "PcieRpClkSrcNumber[4]" = "4"
+	register "PcieRpAdvancedErrorReporting[4]" = "0"
+	register "PcieRpLtrEnable[4]" = "1"
+	# NVMe PCIe lane not wired with separate clk
 	register "PcieRpEnable[8]" = "1"
+	register "PcieRpClkReqSupport[8]" = "0"
+	register "PcieRpAdvancedErrorReporting[8]" = "1"
+	register "PcieRpLtrEnable[8]" = "1"
 
 	register "usb2_ports[0]" = "USB2_PORT_TYPE_C(OC_SKIP)"	# Type-C Port
 	register "usb2_ports[1]" = "USB2_PORT_MID(OC0)"		# Type-A Port (right)
