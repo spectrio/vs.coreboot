@@ -47,8 +47,6 @@
  */
 #define SET_PSYSPL2(w)     (9 * (w) / 10)
 
-#define SUBSYSTEM_ID 0x1AE0006B
-
 static uint8_t read_sku_id_from_gpio(void)
 {
 	const gpio_t sku_id_gpios[] = {
@@ -233,8 +231,6 @@ static unsigned long mainboard_write_acpi_tables(
 	nhlt = nhlt_init();
 	if (!nhlt)
 		return start_addr;
-
-	nhlt->subsystem_id = SUBSYSTEM_ID;
 
 	variant_nhlt_init(nhlt);
 	variant_nhlt_oem_overrides(&oem_id, &oem_table_id, &oem_revision);
